@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Documentation</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">Image Processing</a></h1>
+    </header>
+    <main>
+        <p>This image processing application is responsible for retrieving and manipulating images from the NASA API. It
+            is structured into several functions that provide specific functionalities:</p>
+        <p>The <code>mirrorImage(imgData, slice)</code> function performs a horizontal mirroring of a portion of the
+            image, dividing it into four execution slices. This is done by swapping pixels between the left and right
+            sides.</p>
+        <p>The <code>laplacian(imgData, slice)</code> function applies the Laplacian operator to a portion of the image,
+            highlighting edges and rapid changes in intensity. The result is an image with enhanced contours and areas
+            where intensity varies sharply.</p>
+        <p>The <code>processImage(modifyImage, imgData)</code> function coordinates the image processing, disabling the
+            buttons during the operation and updating the canvas after each step.</p>
+        <p>The <code>getImage()</code> function retrieves images from the NASA API, displaying a random image. It
+            returns an <code>ImageData</code> object for further use in the processing pipeline.</p>
+        <p>The <code>main()</code> function coordinates the main functions of the application, allowing the image to be
+            updated and various processing operations to be performed.</p>
+    </main>
+    <footer>
+        <p>Martin Mihnea Matei ©2023</p>
+    </footer>
+</body>
+
+</html>
