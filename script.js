@@ -77,8 +77,9 @@ async function getImage() {
         }
         const json = await response.json();
         const img = document.getElementsByTagName('img')[0];
-        img.src = json.collection.items[Math.floor(Math.random() * json.collection.items.length)].links[0].href;
+        const imgUrl = json.collection.items[Math.floor(Math.random() * json.collection.items.length)].links[0].href;
         img.crossOrigin = 'anonymous';
+        img.src = "https://nasa-cors-proxy.mihneamartin1603.workers.dev/?url=" + encodeURIComponent(imgUrl);
         await new Promise(resolve => img.onload = resolve);
 
         await new Promise(resolve => setTimeout(resolve, 500));
